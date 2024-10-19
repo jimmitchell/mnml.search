@@ -28,7 +28,7 @@ function runSearch(q) {
               	var title_node = null;
 				if (item.title.length > 0) {
               		title_node = document.createElement("span");
-                  	title_node.innerHTML = ": <b>" + item.title + "</b>"
+                  	title_node.innerHTML = " - <b>" + item.title + "</b>"
 					s = item.title + " - " + item.content_text;
 				}
 				var s = item.content_text;
