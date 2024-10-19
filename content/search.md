@@ -28,7 +28,7 @@ function runSearch(q) {
               	var title_node = null;
 				if (item.title.length > 0) {
               		title_node = document.createElement("span");
-                  	title_node.innerHTML = " : <b>" + item.title + "</b>"
+                  	title_node.innerHTML = ": <b>" + item.title + "</b>"
 					s = item.title + " - " + item.content_text;
 				}
 				var s = item.content_text;
@@ -36,7 +36,7 @@ function runSearch(q) {
 					s = s.substr(0, 250) + "...";
 				}
               	var text_node = document.createElement("span");
-             	text_node.innerHTML = " : " + s
+             	text_node.innerHTML = " - " + s
 				p_node.appendChild(link_node);
               	if (title_node != null) {
 					p_node.appendChild(title_node);
