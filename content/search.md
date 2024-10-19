@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </style>
 
 <form onSubmit="return false;">
-	<input class="field" type="text" name="q" id="input_search" placeholder="Search" onChange="submitSearch(this.value.toLowerCase());" />
+	<input class="field" type="search" name="q" id="input_search" placeholder="Search" onChange="submitSearch(this.value.toLowerCase());" />
 </form>
 
 <div id="list_results">
