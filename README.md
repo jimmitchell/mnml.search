@@ -1,5 +1,5 @@
-# Search page
+# Micro Search
 
 A simple search plug-in for Micro.blog.
 
-![](https://raw.githubusercontent.com/microdotblog/plugin-search-page/master/image.png)
+![](https://raw.githubusercontent.com/jimmitchell/micro-search/master/image.png)

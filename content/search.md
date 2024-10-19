@@ -21,7 +21,7 @@ function runSearch(q) {
 				var p_node = document.createElement("p");        
 				var link_node = document.createElement("a");
 				var d = Date.parse(item.date_published);
-				var date_s = new Date(d).toISOString().substr(0, 10);
+				var date_s = new Date(d).toLocaleDateString().substr(0, 10);
 				var date_node = document.createTextNode(date_s); 
 				link_node.appendChild(date_node);
 				link_node.href = item.url;
