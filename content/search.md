@@ -4,11 +4,8 @@ url: "/search/"
 menu: "main"
 weight: 100
 ---
-
 <script language="javascript">
-
 var archive_results = {};
-
 function runSearch(q) {
 	var results_node = document.getElementById("list_results");
 	results_node.innerHTML = "";
@@ -47,19 +44,15 @@ function runSearch(q) {
 		}
 	} 
 }
-
 function submitSearch(q) {
 	runSearch(q);
-	
 	const url = new URL(window.location.href);
 	url.searchParams.set("q", q);
 	history.pushState({}, "", url);
 }
-
 document.addEventListener("DOMContentLoaded", function() {
 	fetch("/archive/index.json").then(response => response.json()).then(data => {
 		archive_results = data;
-
 		const url = window.location.href;
 		const params = new URLSearchParams(new URL(url).search);
 		const q = params.get("q");
@@ -69,15 +62,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		}	
 	});
 });
-	
 </script>
-
 <style>
-
 #search {
 	display: none;
 }
-
 .field {
 	width: 270px;
 	height: 34px;
@@ -90,13 +79,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	border-radius: 17px;
 	-webkit-appearance: none;
 }
-
 </style>
-
 <form onSubmit="return false;">
 	<input class="field" type="search" name="q" id="input_search" placeholder="To search, type and hit return..." onChange="submitSearch(this.value.toLowerCase());" />
 </form>
-
 <div id="list_results">
-</ul>
+</div>
 
